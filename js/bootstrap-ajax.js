@@ -198,8 +198,8 @@
   }
 
   $(function () {
-    $('body').on('click', 'a.ajax', Ajax.prototype.click)
-    $('body').on('submit', 'form.ajax', Ajax.prototype.submit)
-    $('body').on('click', 'a[data-cancel-closest]', Ajax.prototype.cancel)
+    $('body').off('click').on('click', 'a.ajax', Ajax.prototype.click)
+    $('body').off('submit').on('submit', 'form.ajax', Ajax.prototype.submit)
+    $('body').off('click').on('click', 'a[data-cancel-closest]', Ajax.prototype.cancel)
   })
 }(window.jQuery);
